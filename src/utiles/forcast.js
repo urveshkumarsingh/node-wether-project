@@ -7,7 +7,6 @@ const forcast = (lat,long,calback)=>{
         } else if(body.success === false){
             calback(body.error.info,undefined)
         } else {
-            //console.log(body.current)
             calback(undefined,body.current.weather_descriptions[0]+'. it is currently '+ body.current.temperature +' degree celcious out. It feels like '+ body.current.feelslike +' f out, observation time was '+body.current.observation_time)
         }
     })

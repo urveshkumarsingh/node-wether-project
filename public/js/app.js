@@ -7,7 +7,7 @@ const form = document.querySelector('form')
 form.addEventListener("submit", (e)=>{ 
     e.preventDefault()
     let address = document.querySelector('input').value
-    document.getElementById('errorMessage').innerHTML = ''
+    document.getElementById('errorMessage').innerHTML = 'loading.....'
     document.getElementById('successMessage').innerHTML = ''
     document.getElementById('successPlace').innerHTML = ''
     fetch('/wether?address='+address).then((response)=>{
